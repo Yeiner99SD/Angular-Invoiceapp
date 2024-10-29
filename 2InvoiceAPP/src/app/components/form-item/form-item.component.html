@@ -1,0 +1,8 @@
+<h4 class="text-start">Agregar producto </h4>
+<form class="w-50" (ngSubmit)="onSubmit()">
+    <input name="product" placeholder="Ingrese el nombre del producto" class="form-control m-3" [(ngModel)]="item.product">
+    <input name="price" placeholder="Ingrese el precio del producto" class="form-control m-3" [(ngModel)]="item.price">
+    <input name="quantity" placeholder="Ingrese la cantidad de productos" class="form-control m-3" [(ngModel)]="item.quantity">
+
+    <button class="btn btn-primary m-3">Agregar Item</button>
+</form>

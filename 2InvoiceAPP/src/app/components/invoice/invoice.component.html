@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="card my-5">
+    <div class="card-header text-center bg-primary">
+      <h2 >Ejemplo factura</h2>
+    </div>
+    <div class="card-body">
+      <div>
+        <invoice-view [id]="invoice.id" [name]="invoice.name"></invoice-view>
+      </div>
+      <div class="row my-3">
+        <div class="col">
+          <app-cient-view [client]="invoice.client"></app-cient-view>
+        </div>
+        <div class="col">
+          <app-company-view [company]="invoice.company"></app-company-view>
+        </div>
+        <div class="my-3">
+          <app-table-items [items]="invoice.items" (removeEventEmitter)="removeItem($event)"></app-table-items>
+          <app-total [total]="invoice.total"></app-total>
+          <form-item (addItemEmmiter)="addItem($event)"></form-item>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
